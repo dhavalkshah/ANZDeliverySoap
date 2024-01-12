@@ -1,0 +1,247 @@
+<!-- <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:sd:holcim:command:delivery" targetNamespace="urn:sd:holcim:command:delivery"> -->
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://signonglass.priceglider.com/soap"
+            targetNamespace="http://signonglass.priceglider.com/soap">
+
+    <!--       <xs:element name="getStudentRequest">
+            <xs:complexType> -->
+    <xsd:element name="getTripRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="row" minOccurs="0" maxOccurs="unbounded">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="SIGNID" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="ORDDAT" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="ORDRCD" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="PRJCOD" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="ZPLDES" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="PLTSHN" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="TICKCD" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="CUSLAB" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="CUSNAM" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="TYPTIM" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="DELVAD" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="INSTLN" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="PONFOR" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="ORDRQY" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="PRCQUO" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="TRKCOD" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="DISLAB" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="MAPPAG" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="SLMPLB" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="CANCEL" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="LOADQY1" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="LOADQY2" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="LOADQY3" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="LOADQY4" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="LOADQY5" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="LOADQY6" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="LOADQY7" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="LOADQY8" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="LOADQY9" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="LOADQY10" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="PRODCD1" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="PRODCD2" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="PRODCD3" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="PRODCD4" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="PRODCD5" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="PRODCD6" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="PRODCD7" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="PRODCD8" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="PRODCD9" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="PRODCD10" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="PRDDES1" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="PRDDES2" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="PRDDES3" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="PRDDES4" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="PRDDES5" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="PRDDES6" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="PRDDES7" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="PRDDES8" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="PRDDES9" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="PRDDES10" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="PRICLB1" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="PRICLB2" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="PRICLB3" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="PRICLB4" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="PRICLB5" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="PRICLB6" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="PRICLB7" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="PRICLB8" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="PRICLB9" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="PRICLB10" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="EXTAMT1" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="EXTAMT2" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="EXTAMT3" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="EXTAMT4" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="EXTAMT5" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="EXTAMT6" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="EXTAMT7" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="EXTAMT8" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="EXTAMT9" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="EXTAMT10" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="MNLPNM" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="MLNDES" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="MNLQTY" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="MNLPRC" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="TKTTOT" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="PRVTRK" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="SERVPH" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="CODTOT" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="RADIONO" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="PRODLN" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="DRIVERSUBMITDATE" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="DRIVERWAITINGTIME" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="DRIVERLAT" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="DRIVERLONG" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="DRIVERSIGNATURE" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="CUSTOMERSIGNATURE" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="CUSTOMERLAT" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="CUSTOMERLONG" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="CUSTOMERSIGNDATE" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="DELIVERYSTATUS" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="TRKLIC" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="HLERCD" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="DELVMTDELVSD" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="TOTGRS" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="TRKGVM" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="CUSJOB" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="TOTTAR" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="TOTNET" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="ZPLCIT" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="LOTBLK" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="CustomerName" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="DistKilometer" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="DriverName" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="SAP_Equipment_Number" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="RETURNCONCRETE" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="QUANTITYRETURN" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="RETURNEDTO" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="EXTRAKM" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="ARRIVALTIME" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="TIMEFINISHED" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="WATERADDEDSLUMPSTAND" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="WATERADDEDONSITE" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="WATERADDEDCUSTOMER" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="SIGNATURETYPE" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="COMMENT" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="Brand_LOB" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="CustomField_1" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="CustomField_2" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="CustomField_3" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="CustomField_4" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="CustomField_5" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="CustomField_6" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="CustomField_7" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="CustomField_8" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="CustomField_9" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="CustomField_10" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="id" type="xsd:string" minOccurs="0" />
+                            <xsd:element name="MNLEXT" type="xsd:string" minOccurs="0" />
+
+                            <!--         <xsd:element name="SIGNID" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="ORDDAT" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="ORDRCD" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="PRJCOD" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="ZPLDES" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="PLTSHN" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="TICKCD" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="CUSLAB" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="CUSNAM" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="TYPTIM" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="DELVAD" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="INSTLN" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="PONFOR" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="ORDRQY" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="PRCQUO" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="TRKCOD" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="DISLAB" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="MAPPAG" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="SLMPLB" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="CANCEL" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="LOADQY1" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="LOADQY2" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="LOADQY3" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="LOADQY4" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="LOADQY5" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="LOADQY6" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="LOADQY7" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="LOADQY8" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="LOADQY9" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="LOADQY10" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="PRODCD1" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="PRODCD2" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="PRODCD3" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="PRODCD4" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="PRODCD5" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="PRODCD6" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="PRODCD7" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="PRODCD8" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="PRODCD9" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="PRODCD10" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="PRDDES1" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="PRDDES2" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="PRDDES3" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="PRDDES4" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="PRDDES5" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="PRDDES6" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="PRDDES7" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="PRDDES8" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="PRDDES9" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="PRDDES10" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="PRICLB1" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="PRICLB2" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="PRICLB3" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="PRICLB4" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="PRICLB5" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="PRICLB6" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="PRICLB7" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="PRICLB8" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="PRICLB9" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="PRICLB10" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="EXTAMT1" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="EXTAMT2" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="EXTAMT3" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="EXTAMT4" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="EXTAMT5" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="EXTAMT6" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="EXTAMT7" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="EXTAMT8" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="EXTAMT9" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="EXTAMT10" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="MNLPNM" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="MLNDES" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="MNLQTY" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="MNLPRC" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="TKTTOT" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="PRVTRK" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="SERVPH" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="CODTOT" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="RADIONO" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="PRODLN" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="DRIVERSUBMITDATE" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="DRIVERWAITINGTIME" type="xsd:string" minOccurs="0" />
+                                     <xsd:element name="DRIVERLAT" type="xsd:string" minOccurs="0" />
+                                      <xsd:element name="DRIVERLONG" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="DRIVERSIGNATURE" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="CUSTOMERSIGNATURE" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="CUSTOMERLAT" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="CUSTOMERLONG" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="CUSTOMERSIGNDATE" type="xsd:string" minOccurs="0" />
+                                    <xsd:element name="DELIVERYSTATUS" type="xsd:string" minOccurs="0" /> -->
+
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <!--           <xsd:element name="getTripResponse">
+         <xsd:complexType>
+             <xsd:sequence>
+                 <xsd:element name="status" type="xsd:boolean"/>
+             </xsd:sequence>
+         </xsd:complexType>
+     </xsd:element> -->
+</xsd:schema>
